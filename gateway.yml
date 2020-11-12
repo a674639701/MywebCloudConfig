@@ -1,1 +1,17 @@
-spring.name=nihao
+spring:
+  application:
+    name: gateway
+  .
+  cloud:
+    consul:
+      port: 8500
+      host: localhost
+    gateway:
+      routes:
+        - id: user_route
+          uri: http://localhost:9900/
+          predicates:
+            - Path=/user/**
+  .
+server:
+  port: 9000
