@@ -19,8 +19,7 @@ spring:
           id: user_route
           predicates:
             - Path=/user/**
-          uri: lb://user
+          uri: "lb://user"
       discovery:
         locator:
           enabled: true
-
