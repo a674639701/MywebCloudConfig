@@ -1,0 +1,5 @@
+spring.cloud.consul.port=8500
+spring.cloud.consul.host=localhost
+spring.application.name=Email
+server.port=9950
+spring.cloud.consul.discovery.service-name=${spring.application.name}
