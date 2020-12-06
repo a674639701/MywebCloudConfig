@@ -18,5 +18,5 @@ spring:
         - 
           id: user_route
           predicates: 
-            - "Path=/user/*"
+            - "Path=/user/**"
           uri: "http://localhost:9900/"
