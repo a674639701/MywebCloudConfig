@@ -19,7 +19,7 @@ spring:
           id: user_route
           predicates:
             - Path=/user/**
-          uri: lb://UserService
+          uri: http://localhost:9900/
       discovery:
         locator:
           enabled: true
