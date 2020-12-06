@@ -18,7 +18,7 @@ spring:
         - 
           id: user_route
           predicates:
-            - Path=/user/{state},/user/{state}/{state2}
+            - Path=/user/**
           filters:
-            - SetPath={state}/{state2}
+            - StripPrefix=1
           uri: "http://localhost:9900/"
