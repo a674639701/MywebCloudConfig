@@ -27,4 +27,4 @@ spring:
             - Path=/user/**
           filters:
             - StripPrefix=1
-          uri: lb:UserService
+          uri: lb://UserService
