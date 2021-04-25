@@ -14,9 +14,15 @@ spring:
       host: localhost
       port: 8500
     gateway: 
-      routes: 
-        - 
-          id: user_route
+      routes:
+        -
+          id: email_route
+          predicates:
+            - Path=/email/**
+          filters:
+            - StripPrefix=1
+          uri: "http://localhost:9950/"
+        - id: user_route
           predicates:
             - Path=/user/**
           filters:
