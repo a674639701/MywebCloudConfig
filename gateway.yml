@@ -21,10 +21,10 @@ spring:
             - Path=/email/**
           filters:
             - StripPrefix=1
-          uri: "http://localhost:9950/"
+          uri: lb://Email
         - id: user_route
           predicates:
             - Path=/user/**
           filters:
             - StripPrefix=1
-          uri: "http://localhost:9900/"
+          uri: lb:UserService
