@@ -28,3 +28,9 @@ spring:
           filters:
             - StripPrefix=1
           uri: lb://UserService
+        - id: article_route
+            predicates:
+              - Path=/article/**
+            filters:
+              - StripPrefix=1
+            uri: lb://Article
