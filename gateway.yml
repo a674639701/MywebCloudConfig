@@ -34,3 +34,9 @@ spring:
           filters:
               - StripPrefix=1
           uri: lb://Article
+        - id: backstage_route
+          predicates:
+            - Path=/backstage/**
+          filters:
+            - StripPrefix=1
+          uri: lb://BackStage
